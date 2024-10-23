@@ -1,0 +1,14 @@
+<h1>Add a Bookmark to <%= @list.name %></h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <div>
+    <%= f.input :comment, placeholder: "Add comments" %>
+    <%=  f.association :movie, prompt: "Choose a movie", input_html: {data: {controller: "tom-select"}}  %>
+  </div>
+
+  <div>
+    <%= f.button :submit, "Add Bookmark" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back to List', list_path(@list) %>
