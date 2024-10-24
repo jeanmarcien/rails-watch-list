@@ -13,7 +13,8 @@
       Description: <%= bookmark.movie.overview %> -
       Comment: <%= bookmark.comment %>
 
-      <%= link_to 'Delete', list_bookmark_path(@list, bookmark), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+      <%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+
     </li>
   <% end %>
 </ul>
