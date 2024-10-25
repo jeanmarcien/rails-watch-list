@@ -1,12 +1,18 @@
-<h1>Create a New List</h1>
+<div class="container py-5">
+  <h1 class="text-center mb-4">Create a New List</h1>
 
-<%= simple_form_for @list do |f| %>
-  <div>
-    <%= f.input :name %>
-  </div>
+  <%= simple_form_for @list, html: { class: 'form-horizontal' } do |f| %>
+    <div class="form-group">
+      <%= f.input :name, input_html: { class: 'form-control' }, label_html: { class: 'col-form-label' } %>
+    </div>
 
-  <div>
-    <%= f.button :submit, "Create List" %>
-  </div>
-<% end %>
-<%= link_to 'Cancel', lists_path, class: 'btn btn-secondary' %>
+    <div class="form-group d-flex justify-content-between">
+      <div>
+        <%= f.button :submit, "Create List", class: 'btn btn-primary btn-lg' %>
+      </div>
+      <div>
+        <%= link_to 'Cancel', root_path, class: 'btn btn-secondary btn-lg' %>
+      </div>
+    </div>
+  <% end %>
+</div>
