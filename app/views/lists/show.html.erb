@@ -1,7 +1,12 @@
+<div class="bg-light py-3 mb-4 shadow-sm">
+  <div class="container d-flex justify-content-center align-items-center">
+    <h2 class="text-center">
+      <%= @list.name %> (<%= @list.bookmarks.count %> movie<%= @list.bookmarks.count > 1 ? "s" : "" %>)
+    </h2>
+  </div>
+</div>
+
 <div class="container py-5">
-  <h2 class="text-center mb-4">
-    <%= @list.name %> (<%= @list.bookmarks.count %> movie<%= @list.bookmarks.count > 1 ? "s" : "" %>)
-  </h2>
 
   <div class="mb-4 d-flex justify-content-between">
     <div>
